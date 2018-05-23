@@ -50,17 +50,23 @@
         <div :class="isTrue?'bindRedClass':'bindBlueClass'">绑定class</div>
         <div :style="isTrue?'color:yellow':'color:blue'">绑定style</div>
         <div v-cloak>{{message}}</div>
-
+        <div>{{setData.count}}</div>
     </div>
 </template>
 
 <script>
+var outData = {
+    count:1,
+    goodName:'car'
+}
+
 export default{
     name:'Header',
     data(){
         return {
             isTrue:true,
             isShow:false,
+            setData:outData,
             nameDatas:[
                 {name:'张三'},
                 {name:'李四'},
