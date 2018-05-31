@@ -1,0 +1,35 @@
+@import '../base/base.scss';
+// 头像
+.pk-header-sm{
+    width:18px;
+    height:18px;
+    img{
+        width:100%;
+        min-height:18px;
+        border-radius: 50%;
+    }
+}
+
+// 头像列表信息
+.user-column {
+    &-left {
+        width: 100%;
+        .user-column-middle {
+            flex: 1;
+            &-name {
+                font-size: 16px;   
+                color:$pk_text_primary; 
+                margin-bottom:8px;
+                line-height: 1;
+            }
+            &-desciption,&-info {
+                font-size: 12px;   
+                color:$pk_text_secondary;
+                line-height: 1;     
+            }
+            &-info{
+                margin-top:8px;
+            }
+        }
+    }
+}

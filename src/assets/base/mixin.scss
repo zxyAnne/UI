@@ -1,0 +1,13 @@
+@mixin textEllipsis($clomun){
+    overflow:hidden;   
+    text-overflow:ellipsis;  
+    display:-webkit-box;   
+    -webkit-box-orient:vertical;  
+    -webkit-line-clamp:$clomun;  
+}
+@mixin Position($position,$l,$t,$b){
+    position: $position;
+    left: $l;
+    top: $t;
+    bottom:$b;
+}

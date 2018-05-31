@@ -11,7 +11,7 @@ export default{
     data(){
         return{
             titles:[
-                {title:'排版字体大小'},
+                {title:'Color 色彩'},
                 {title:'媒体查询'},
                 {title:'网格系统'},
                 {title:'网格列偏移'},
@@ -43,6 +43,7 @@ export default{
         white-space: nowrap;
         text-overflow: ellipsis;
         font-weight: 400;
+        padding-left: 35px;
     }
 }
 

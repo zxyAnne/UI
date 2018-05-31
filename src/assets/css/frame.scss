@@ -1,147 +1,22 @@
-@import 'variables';
-.fl {
-    float: left;
+// 父元素的居中显示
+.pk-position-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
-.fr {
-    float: right;
+.pk-flex-box{
+    display: flex;
+    &.algin-center{
+        align-items: center;
+    }
+    &-fx{
+        flex:1;
+    }
+    &-sk{
+        flex-shrink: 0;
+        &.baseline{
+            align-self: baseline;
+        }
+    }
 }
-.clearfix:before {
-    content: '';
-    display: block;
-}
-.clearfix:after {
-    content: '';
-    display: block;
-    clear: both;
-    zoom: 1;
-    overflow: hidden;
-}
-// 颜色定义规范
-.pk-text-yellow{
-    color:#FFC800;
-}
-.pk-text-blue{
-    color:#4A90E2;
-}
-.pk-text-red{
-    color:#DE4F45;
-}
-.pk-text-red{
-    color:#DE4F45;
-}
-.pk-text-green{
-    color:#009A61;
-}
-.pk-text-32{
-    color:#323232;
-}
-.pk-text-66{
-    color:#666666;
-}
-.pk-text-99{
-    color:#999999;
-}
-.pk-text-cc{
-    color:#323232;
-}
-.pk-text-e5{
-    color:#e5e5e5;
-}
-.pk-text-f2f2f2{
-    color:#f2f2f2;
-}
-.pk-text-f7f7f7{
-    color:#f7f7f7;
-}
-// 字体显示
-.pk-text-center{
-    text-align: center;
-}
-.pk-text-left{
-    text-align: left;
-}
-.pk-text-right{
-    text-align: left;
-}
-
-// 文本字号
-.pk-fs-12 {font-size:12px;}
-.pk-fs-15 {font-size:15px;}
-.pk-fs-14 {font-size:14px;}
-.pk-fs-15 {font-size:14px;}
-.pk-fs-16 {font-size:16px;}
-.pk-fs-18 {font-size:18px;}
-.pk-fs-20 {font-size:20px;}
-.pk-fs-24 {font-size:24px;}
-.pk-fs-28 {font-size:28px;}
-
-
-.pk-h1{font-size:24px;}
-.pk-h2{font-size:20px;}
-.pk-h3{font-size:18px;}
-.pk-h4{font-size:16px;}
-.pk-h5{font-size:14px;}
-.pk-h6{font-size:12px;}
-
-//加粗
-.pk-fw-300{font-weight: 300;}
-.pk-fw-400{font-weight: 400;}
-.pk-fw-500{font-weight: 500;}
-.pk-fw-600{font-weight: 600;}
-.pk-fw-700{font-weight: 700;}
-.pk-fw-800{font-weight: 800;}
-.pk-fw-normal{font-weight: normal;}
-
-//border-radius
-.pk-br-1{border-radius: 1px}
-.pk-br-2{border-radius: 2px}
-.pk-br-3{border-radius: 3px}
-.pk-br-4{border-radius: 4px}
-.pk-br-5{border-radius: 5px}
-.pk-br-6{border-radius: 6px}
-.pk-br-7{border-radius: 7px}
-.pk-br-8{border-radius: 8px}
-.pk-br-9{border-radius: 8px}
-.pk-br-10{border-radius:1px}
-
-// border
-.pk-bd-n{
-    border:none;
-}
-.pk-bd-a{
-    border:1px solid #f5f5f5;
-}
-.pk-bd-t{
-    border-top:1px solid #f5f5f5; 
-}
-.pk-bd-b{
-    border-bottom:1px solid #f5f5f5; 
-}
-.pk-bd-l{
-    border-left:1px solid #f5f5f5; 
-}
-.pk-bd-r{
-    border-right:1px solid #f5f5f5; 
-}
-// 背景定义规范
-.pk-bg-yellow{
-    color:#FFC800;
-}
-.pk-bg-blue{
-    color:#4A90E2;
-}
-.pk-bg-red{
-    color:#DE4F45;
-}
-.pk-bg-red{
-    color:#DE4F45;
-}
-.pk-bg-green{
-    color:#009A61;
-}
-
-//滑动开关
-
-
-
-

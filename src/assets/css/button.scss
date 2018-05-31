@@ -1,0 +1,10 @@
+@import '../base/base.scss';
+@import '../base/mixin.scss';
+.pk-button-sm{
+    display: inline-block;
+    padding: 6px 16px;
+    background: $pk_bg_yellow;
+    color: $pk_text_primary;
+    border-radius: 14px;
+    font-size: 12px;
+}
