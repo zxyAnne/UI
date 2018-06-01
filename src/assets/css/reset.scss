@@ -30,6 +30,12 @@ span em{
 .fr {
     float: right;
 }
+.pk-fl {
+    float: left;
+}
+.pk-fr {
+    float: right;
+}
 .clearfix:before {
     content: '';
     display: block;
@@ -124,6 +130,22 @@ li {
 .pk-h5{font-size:14px;}
 .pk-h6{font-size:12px;}
 
+
+//加粗
+.pk-text-bold{font-weight:bold;}
+.pk-text-normal{font-weight: normal;}
+
+//对齐
+.pk-text-left{
+    text-align: left;
+}
+.pk-text-right{
+    text-align: right;
+}
+.pk-text-center{
+    text-align: center;
+}
+
 // 标题规范
 .pk-h2-text32{
     font-size:20px;
@@ -136,31 +158,14 @@ li {
     line-height: 1.5;
 }
 
-// 卡片阴影
-.pk-box-shadow{
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-}
-
-//加粗
-.pk-fw-300{font-weight: 300;}
-.pk-fw-400{font-weight: 400;}
-.pk-fw-500{font-weight: 500;}
-.pk-fw-600{font-weight: 600;}
-.pk-fw-700{font-weight: 700;}
-.pk-fw-800{font-weight: 800;}
-.pk-fw-normal{font-weight: normal;}
-
 //border-radius
-.pk-br-1{border-radius: 1px}
 .pk-br-2{border-radius: 2px}
-.pk-br-3{border-radius: 3px}
 .pk-br-4{border-radius: 4px}
-.pk-br-5{border-radius: 5px}
 .pk-br-6{border-radius: 6px}
-.pk-br-7{border-radius: 7px}
 .pk-br-8{border-radius: 8px}
-.pk-br-9{border-radius: 8px}
-.pk-br-10{border-radius:1px}
+.pk-br-10{border-radius:10px}
+.pk-br-14{border-radius:14px}
+.pk-br-100{border-radius:50%}
 
 // border
 .pk-bd-n{
@@ -181,6 +186,11 @@ li {
 }
 .pk-bd-r{
     border-right:1px solid $pk_bd_line; 
+}
+
+// 卡片阴影
+.pk-box-shadow{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 // 背景定义规范
 .pk-bg-yellow{
@@ -219,6 +229,24 @@ li {
 }
 .pk-bg-gray{
     background:$pk_bg_gray;
+}
+
+//超出一行省略
+.pk-text-ellipsis1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//超出2行省略
+.pk-text-ellipsis2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp:2;
+    -webkit-line-clamp: 2;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
 }
 
 // padding-top值
@@ -327,22 +355,78 @@ li {
     position: relative;
 }
 
-//超出一行省略
-.pk-text-ellipsis1 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+// 按钮类辅助
+.pk-btn-yellow{
+    background:$pk_bg_yellow;
+}
+.pk-btn-blue{
+    background:$pk_bg_blue;
+}
+.pk-btn-red{
+    background:$pk_bg_red;
+}
+.pk-btn-green{
+    background:$pk_bg_green;
+}
+.pk-btn-primary{
+    background:$pk_bg_primary;
+}
+.pk-btn-regular{
+    background:$pk_bg_regular;
+}
+.pk-btn-secondary{
+    background:$pk_bg_secondary;
+}
+.pk-btn-prominent{
+    background:$pk_bg_prominent;
+}
+.pk-btn-rare{
+    background:$pk_bg_rare;
+}
+.pk-btn-frame{
+    background:$pk_bg_frame;
+}
+.pk-btn-line{
+    background:$pk_bg_line;
+}
+.pk-btn-gray{
+    background:$pk_bg_gray;
 }
 
-//超出2行省略
-.pk-text-ellipsis2 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    line-clamp:2;
-    -webkit-line-clamp: 2;
-    box-orient: vertical;
-    -webkit-box-orient: vertical;
+// 轮廓线按钮类辅助
+.pk-btn-yellow-outline{
+    border:1px solid $pk_bg_yellow;
 }
-
-
+.pk-btn-blue-outline{
+    border:1px solid $pk_bg_blue;
+}
+.pk-btn-red-outline{
+    border:1px solid $pk_bg_red;
+}
+.pk-btn-green-outline{
+    border:1px solid $pk_bg_green;
+}
+.pk-btn-primary-outline{
+    border:1px solid $pk_bg_primary;
+}
+.pk-btn-regular-outline{
+    border:1px solid $pk_bg_regular;
+}
+.pk-btn-secondary-outline{
+    border:1px solid $pk_bg_secondary;
+}
+.pk-btn-prominent-outline{
+    border:1px solid $pk_bg_prominent;
+}
+.pk-btn-rare-outline{
+    border:1px solid $pk_bg_rare;
+}
+.pk-btn-frame-outline{
+    border:1px solid $pk_bg_frame;
+}
+.pk-btn-line-outline{
+    border:1px solid $pk_bg_line;
+}
+.pk-btn-gray-outline{
+    border:1px solid $pk_bg_gray;
+}

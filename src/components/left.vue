@@ -11,10 +11,14 @@ export default{
     data(){
         return{
             titles:[
-                {title:'Color 色彩'},
-                {title:'媒体查询'},
-                {title:'网格系统'},
-                {title:'网格列偏移'},
+                {title:'Background 色彩'},
+                {title:'Text 文本工具'},
+                {title:'Border 设置'},
+                {title:'shadow 设置'},
+                {title:'内外边距'},
+                {title:'button 按钮'},
+                {title:'icon 命名'},
+                {title:'布局容器'},
             ]
         }
     }
@@ -33,7 +37,7 @@ export default{
     color: #364149;
     background: #fafafa;
     border-right: 1px solid rgba(0,0,0,.07);
-    ul li{
+    >ul li{
         display: block;
         height: 40px;
         color: #444;
@@ -44,6 +48,18 @@ export default{
         text-overflow: ellipsis;
         font-weight: 400;
         padding-left: 35px;
+        
+    }
+    >ul li:hover{
+        color: #398dee;
+        background: #f2f2f2;
+    }
+    >ul li.active{
+        background:#f2f2f2;
+    }
+    .ul-child{
+        position: absolute;
+        left: 23px;
     }
 }
 
