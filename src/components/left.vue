@@ -1,26 +1,41 @@
 <template>
-    <div class="left-container" id="app">
+    <div class="left-container">
         <ul class="pk-flex">
-            <li :key="index" v-for="(item,index) in titles" class="pk-fs-12">{{item.title}}</li> 
+            <li v-for="(item,index) in titles" 
+            :key="index"
+             :title="item.title"
+             @click="scrollTo(index)"
+            class="pk-fs-12"
+            :class="{'active':scrollIndex==index+1}"
+            >{{item.title}}</li> 
         </ul>
     </div>
 </template>
 <script>
+import pageUtil from '../utils/page';
 export default{
     name:'left',
     data(){
         return{
             titles:[
-                {title:'Background 色彩'},
-                {title:'Text 文本工具'},
-                {title:'Border 设置'},
-                {title:'shadow 设置'},
-                {title:'内外边距'},
-                {title:'button 按钮'},
-                {title:'icon 命名'},
-                {title:'布局容器'},
-                {title:'弹框容器'},
+                {title:'1、Background 色彩'},
+                {title:'2、Text 文本工具'},
+                {title:'3、Border 设置'},
+                {title:'4、shadow 设置'},
+                {title:'5、内外边距'},
+                {title:'6、button 按钮'},
+                {title:'7、icon 命名'},
+                {title:'8、布局容器'},
+                {title:'9、弹框容器'},
             ]
+        }
+    },
+    props:{
+        scrollIndex:Number,
+    },
+    methods:{
+        scrollTo(index){
+            pageUtil.scrollTo(index);
         }
     }
 }
@@ -56,7 +71,7 @@ export default{
         background: #f2f2f2;
     }
     >ul li.active{
-        background:#f2f2f2;
+        background:#e0e0e1;
     }
     .ul-child{
         position: absolute;

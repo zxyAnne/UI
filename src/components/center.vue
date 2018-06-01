@@ -1,5 +1,5 @@
 <template>
-    <div class="center-container">
+    <div :id="id" ref="container" class="center-container">
         <section>
             <h1>1.1 背景 色彩</h1>
             <p>pk 为了避免视觉传达差异，使用一套特定的调色板来规定颜色，为搭建的产品提供一致的外观视觉感受。</p>
@@ -376,7 +376,6 @@
                  </code>      
             </div>
         </section>
-
         <section>
             <h1>4.1 阴影 设置</h1>
             <p>pk 本站统一卡片阴影设置 .pk-box-shadow</p>
@@ -386,7 +385,6 @@
                 box-shadow
             </div>
         </section>
-
         <section>
             <h1>5.1 内外边距 </h1>
             <p>pk 左右边距默认大小（16px）</p>
@@ -479,7 +477,6 @@
                 </table>
             </div>
         </section>
-
         <section>
             <h1>6.1 html元素 button </h1>
             <p>在要应用按钮样式的元素上添加 .pk-btn，再设置相应的颜色。</p>
@@ -570,9 +567,8 @@
                      <span>&lt;<span>/h1</span>&gt;</span>
                  </code>       
             </div>
-
+            
         </section>
-
         <section>
             <h1>7.1 icon </h1>
             <p>pk 图标命名规则</p>
@@ -622,7 +618,6 @@
                  </code>      
             </div>    
         </section>
-
         <section>
             <h1>8.1 布局容器 </h1>
             <p>pk 需要一个容器元素来包裹网站的内容。</p>
@@ -698,12 +693,30 @@
     </div>
 </template>
 <script>
+import pageUtil from '../utils/page';
+import {throttle} from '../utils/throttle'
 export default{
     name:'center',
     data(){
         return{
-            
+            id:pageUtil.centerId
         }
+    },
+    mounted(){
+        var self = this;
+        let container = this.$refs.container;
+        let containerChildren = container.children;
+        let containerChildrenAmount = containerChildren.length;
+        let onscrollAmount = 0;
+        container.onscroll = throttle(function(){
+            for(let i=0;i<containerChildrenAmount-1;i++){
+                //console.log('onscroll:',onscrollAmount++);
+                if(containerChildren[i].offsetTop <= container.scrollTop && containerChildren[i+1].offsetTop>container.scrollTop){
+                    self.$emit("currentScrollIndex",i+1);
+                    break;
+                }
+            }
+        },100)
     }
 }
 </script>

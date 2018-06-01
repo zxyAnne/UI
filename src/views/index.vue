@@ -2,8 +2,8 @@
     <div>
         <MainHead></MainHead>
         <div class="main">
-            <Left></Left>
-            <Center></Center>
+            <Left :scrollIndex="scrollIndex"></Left>
+            <Center @currentScrollIndex="loadScrollIndex"></Center>
         </div>
     </div>
 </template>
@@ -14,6 +14,16 @@ import Left from '../components/left'
 import Center from '../components/center'
 export default{
     name:'Header',
+    data(){
+        return {
+            scrollIndex:1,
+        }
+    },
+    methods:{
+        loadScrollIndex(index){
+            this.scrollIndex = index;
+        }
+    },
     components:{
         MainHead,
         Left,
