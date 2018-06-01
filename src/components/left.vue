@@ -19,6 +19,7 @@ export default{
                 {title:'button 按钮'},
                 {title:'icon 命名'},
                 {title:'布局容器'},
+                {title:'弹框容器'},
             ]
         }
     }

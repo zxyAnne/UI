@@ -785,6 +785,7 @@ export default{
         }
         &-box-1{
             flex-grow: 0;
+            min-width: 200px;
         }
     }
     .demo-btn-set{
